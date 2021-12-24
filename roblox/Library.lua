@@ -1,3 +1,5 @@
+local Library = {}
+
 local MenuConfig = {
     Color = Color3.fromRGB(0, 98, 255),
     Secondary = Color3.fromRGB(0, 52, 134),
@@ -88,7 +90,7 @@ end
 
 local TabAmount = 0
 
-local Library = {}
+
 function Library:CreateJay()
     
 
@@ -2041,3 +2043,4 @@ function Library:CreateJay()
     end
     return InsideLibrary
 end
+return Library
