@@ -660,7 +660,7 @@ function Library:CreateJay()
                         CheckText.BackgroundTransparency = 1.000
                         CheckText.Size = UDim2.new(0, 113, 0, 40)
                         CheckText.Font = Enum.Font.SourceSans
-                        CheckText.Text = "Funn Button"
+                        CheckText.Text = btntext
                         CheckText.TextColor3 = Color3.fromRGB(255, 255, 255)
                         CheckText.TextSize = 14.000
 
