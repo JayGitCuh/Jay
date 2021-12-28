@@ -306,6 +306,8 @@ function Library:CreateJay()
             if TabSpot.Name == "1" then
                 TabSpot.Visible = true
                 Tab.ImageColor3 = MenuConfig.Color
+	    else
+		TabSpot.Visible = false
             end
 
             local FunnyLeft = Instance.new("Frame")
