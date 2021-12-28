@@ -1004,7 +1004,7 @@ function Library:CreateJay()
                         Slider_2.Position = UDim2.new(0, 0, 0.0476190485, 0)
                         Slider_2.Size = UDim2.new(0, 135, 0, 20)
                         Slider_2.Font = Enum.Font.SourceSans
-                        Slider_2.Text = "65"
+                        Slider_2.Text = minvalue
                         Slider_2.TextColor3 = Color3.fromRGB(255, 255, 255)
                         Slider_2.TextSize = 14.000
                         
