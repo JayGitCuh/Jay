@@ -94,7 +94,7 @@ local TabAmount = 0
 function Library:CreateJay()
     
 
-    if checkObj(game:GetService("CoreGui"),"JayLib") then --path and then the object
+    if checkObj(game:GetService("CoreGui"),"JayLib") then
         game:GetService("CoreGui"):FindFirstChild("JayLib"):Destroy()
         print("Destroyed Other Instance")
     end
@@ -257,6 +257,7 @@ function Library:CreateJay()
             TabAmount = TabAmount + 1
             local Tab = Instance.new("ImageLabel")
             local TabButton = Instance.new("TextButton")
+	    local TabListLayout = Instance.new("UIListLayout")
             
             local btnTrans = 1
 
@@ -289,8 +290,13 @@ function Library:CreateJay()
             TabButton.Text = TabName
             TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
             TabButton.TextSize = 14.000
-            
-            --Container Stuff
+			
+	    TabListLayout.Parent = Tab
+            TabListLayout.FillDirection = Enum.FillDirection.Horizontal
+            TabListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+            TabListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+            TabListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+            TabListLayout.Padding = UDim.new(0, 0)
 
             local TabSpot = Instance.new("ScrollingFrame")
             
