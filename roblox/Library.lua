@@ -81,7 +81,7 @@ function OpenDiscord(invitecode)
                 Body = http:JSONEncode({
                 cmd = 'INVITE_BROWSER',
                 nonce = http:GenerateGUID(false),
-                args = {code = invitecode} -- put your server's code here in between the single quotes, and that's literally all you need
+                args = {code = invitecode}
             })
         })
     end
@@ -129,7 +129,7 @@ function Library:CreateJay()
 
         
 
-        local toggle = true -- false is Off; true is On
+        local toggle = true
 
 	    local u = game:GetService("UserInputService")
 
@@ -252,7 +252,7 @@ function Library:CreateJay()
       
 
         local InsideMenu = {}
-        function InsideMenu:CreateTab(TabName, Size)
+        function InsideMenu:CreateTab(TabName, sizeof)
 
             TabAmount = TabAmount + 1
             local Tab = Instance.new("ImageLabel")
@@ -284,7 +284,7 @@ function Library:CreateJay()
             TabButton.BackgroundTransparency = 1.000
             TabButton.BorderColor3 = Color3.fromRGB(130, 203, 255)
             TabButton.BorderSizePixel = 0
-            TabButton.Size = UDim2.new(0, 56, 0, 21)
+            TabButton.Size = sizeof or UDim2.new(0, 56, 0, 21)
             TabButton.Font = Enum.Font.SourceSansBold
             TabButton.Text = TabName
             TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -702,14 +702,12 @@ function Library:CreateJay()
                                         ImageTransparency = 0,
                                     })
                                     :Play()
-                                    --- We put our animation here when the toggle is on
                                 else
                                     game.TweenService
                                     :Create(Check, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
                                         ImageTransparency = 0.800,
                                     })
                                     :Play()
-                                    ---We Put our animation here when the toggle is off
                                 end
                                 pcall(callback, toggled)
                             end
@@ -723,25 +721,16 @@ function Library:CreateJay()
                                         ImageTransparency = 0,
                                     })
                                     :Play()
-                                    --- We put our animation here when the toggle is on
                                     else
                                         game.TweenService
                                         :Create(Check, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
                                             ImageTransparency = 0.800,
                                         })
                                         :Play()
-                                        ---We Put our animation here when the toggle is off
                                     end
-                                --[[
-                                toggled = not toggled
-                                
 
                                     
                                 
-                                
-                                pcall(callback, toggled)
-
-                                ]]
                             end)
             
                            
@@ -762,7 +751,6 @@ function Library:CreateJay()
                         local AnotherFunnyButton = Instance.new("TextButton")
                         local ToggleText = Instance.new("TextLabel")
                         
-                        --Properties:
                         
                         Toggle.Name = "Toggle"..btntext
                         Toggle.Parent = SecStuff
@@ -840,7 +828,6 @@ function Library:CreateJay()
                                     Position = UDim2.new(0.752, 0,0.532, 0),
                                 })
                                 :Play()
-                                --- We put our animation here when the toggle is on
                             else
                                 game.TweenService
                                 :Create(TCircle, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -848,7 +835,6 @@ function Library:CreateJay()
                                     Position = UDim2.new(0.252, 0,0.532, 0),
                                 })
                                 :Play()
-                                ---We Put our animation here when the toggle is off
                             end
                             pcall(callback, toggled)
                         end
@@ -886,7 +872,6 @@ function Library:CreateJay()
                                     Position = UDim2.new(0.752, 0,0.532, 0),
                                 })
                                 :Play()
-                                --- We put our animation here when the toggle is on
                             else
                                 game.TweenService
                                 :Create(TCircle, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -894,18 +879,7 @@ function Library:CreateJay()
                                     Position = UDim2.new(0.252, 0, 0.532, 0),
                                 })
                                 :Play()
-                                ---We Put our animation here when the toggle is off
                             end
-                            --[[
-                            toggled = not toggled
-                            
-
-                                
-                            
-                            
-                            pcall(callback, toggled)
-
-                            ]]
                         end)
         
                        
@@ -939,7 +913,6 @@ function Library:CreateJay()
 
                         SliderValue = minvalue
                         
-                        --Properties:
                         
                         Slider.Name = "Slider"
                         Slider.Parent = SecStuff
@@ -1383,14 +1356,12 @@ function Library:CreateJay()
                                         ImageTransparency = 0,
                                     })
                                     :Play()
-                                    --- We put our animation here when the toggle is on
                                 else
                                     game.TweenService
                                     :Create(Check, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
                                         ImageTransparency = 0.800,
                                     })
                                     :Play()
-                                    ---We Put our animation here when the toggle is off
                                 end
                                 pcall(callback, toggled)
                             end
@@ -1404,25 +1375,13 @@ function Library:CreateJay()
                                         ImageTransparency = 0,
                                     })
                                     :Play()
-                                    --- We put our animation here when the toggle is on
                                     else
                                         game.TweenService
                                         :Create(Check, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
                                             ImageTransparency = 0.800,
                                         })
                                         :Play()
-                                        ---We Put our animation here when the toggle is off
                                     end
-                                --[[
-                                toggled = not toggled
-                                
-
-                                    
-                                
-                                
-                                pcall(callback, toggled)
-
-                                ]]
                             end)
             
                            
@@ -1443,7 +1402,6 @@ function Library:CreateJay()
                         local AnotherFunnyButton = Instance.new("TextButton")
                         local ToggleText = Instance.new("TextLabel")
                         
-                        --Properties:
                         
                         Toggle.Name = "Toggle"..btntext
                         Toggle.Parent = SecStuff
@@ -1521,7 +1479,6 @@ function Library:CreateJay()
                                     Position = UDim2.new(0.752, 0,0.532, 0),
                                 })
                                 :Play()
-                                --- We put our animation here when the toggle is on
                             else
                                 game.TweenService
                                 :Create(TCircle, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -1529,7 +1486,6 @@ function Library:CreateJay()
                                     Position = UDim2.new(0.252, 0,0.532, 0),
                                 })
                                 :Play()
-                                ---We Put our animation here when the toggle is off
                             end
                             pcall(callback, toggled)
                         end
@@ -1567,7 +1523,6 @@ function Library:CreateJay()
                                     Position = UDim2.new(0.752, 0,0.532, 0),
                                 })
                                 :Play()
-                                --- We put our animation here when the toggle is on
                             else
                                 game.TweenService
                                 :Create(TCircle, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -1575,18 +1530,7 @@ function Library:CreateJay()
                                     Position = UDim2.new(0.252, 0, 0.532, 0),
                                 })
                                 :Play()
-                                ---We Put our animation here when the toggle is off
                             end
-                            --[[
-                            toggled = not toggled
-                            
-
-                                
-                            
-                            
-                            pcall(callback, toggled)
-
-                            ]]
                         end)
         
                        
