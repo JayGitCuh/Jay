@@ -290,7 +290,8 @@ function Library:CreateJay()
             TabButton.Text = TabName
             TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
             TabButton.TextSize = 14.000
-			
+	
+	    TabListLayout.Name = "Listfunny"
 	    TabListLayout.Parent = Tab
             TabListLayout.FillDirection = Enum.FillDirection.Horizontal
             TabListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
