@@ -285,7 +285,7 @@ function Library:CreateJay()
             TabButton.BackgroundTransparency = 1.000
             TabButton.BorderColor3 = Color3.fromRGB(130, 203, 255)
             TabButton.BorderSizePixel = 0
-            TabButton.Size = UDim2.new(0, 56, 0, 21)
+            TabButton.Size = sizeof or UDim2.new(0, 56, 0, 21)
             TabButton.Font = Enum.Font.SourceSansBold
             TabButton.Text = TabName
             TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
