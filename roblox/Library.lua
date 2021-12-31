@@ -270,7 +270,7 @@ function Library:CreateJay()
             Tab.BorderSizePixel = 6
             Tab.Position = UDim2.new(0.5, 0, 0.5, 0)
             Tab.Selectable = true
-            Tab.Size = UDim2.new(0, 56, 0, 21)
+            Tab.Size = sizeof or UDim2.new(0, 56, 0, 21)
             Tab.Image = "rbxassetid://3570695787"
             Tab.ImageColor3 = Color3.fromRGB(31, 31, 31)
             Tab.ImageTransparency = 0
@@ -284,7 +284,7 @@ function Library:CreateJay()
             TabButton.BackgroundTransparency = 1.000
             TabButton.BorderColor3 = Color3.fromRGB(130, 203, 255)
             TabButton.BorderSizePixel = 0
-            TabButton.Size = sizeof or UDim2.new(0, 56, 0, 21)
+            TabButton.Size = UDim2.new(0, 56, 0, 21)
             TabButton.Font = Enum.Font.SourceSansBold
             TabButton.Text = TabName
             TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
