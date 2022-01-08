@@ -1284,3 +1284,4 @@ function Library:CreateMain()
     end
     return InsideLibrary
 end
+return Library
