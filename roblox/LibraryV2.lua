@@ -1,3 +1,5 @@
+local Library = {}
+
 function checkObj(path, object)
     for i, v in ipairs(path:GetChildren()) do
         if v.Name == object then
@@ -53,7 +55,7 @@ local function MakeDraggable(ClickObject, Object)
 	end)
 end
 
-local Library = {}
+
 function Library:CreateMain()
 
     if checkObj(game:GetService("CoreGui"),"JayLib") then --path and then the object
