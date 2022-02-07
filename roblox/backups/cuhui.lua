@@ -23,7 +23,6 @@ local library = {
     fileext = ".jay"
 }
 getgenv().library = library
-library.GunModules = game:GetService("ReplicatedStorage").GunModules:Clone()
 for _, Modules in pairs(getgc(true)) do
     if (type(Modules) == "table") then
         if (rawget(Modules, "send")) then
