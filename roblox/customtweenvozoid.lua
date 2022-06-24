@@ -3,7 +3,7 @@
     Works with drawing objects
 ]]
 
-local Signal = loadstring(game:HttpGet("https://raw.githubusercontent.com/vozoid/utility/main/Signal.lua"))()
+local Signal = loadstring(game:HttpGet("https://raw.githubusercontent.com/JayGitCuh/Jay/main/roblox/signalsbyvozoid.lua"))()
 
 --[[
     Easing styles math: https://www.desmos.com/calculator/m8myals511
