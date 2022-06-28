@@ -13,7 +13,7 @@ end
 
 
 
-local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = getgenv.menu["name"], open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = getgenv.menu["config"], fileext = ".txt"}
+local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = getgenv().menu["name"], open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = getgenv().menu["config"], fileext = ".txt"}
 getgenv().library = library
 
 --Locals
