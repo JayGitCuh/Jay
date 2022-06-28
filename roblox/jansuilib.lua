@@ -16,7 +16,7 @@ _G.menu = {
     config = "legacy"
 }
 
-local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = _G.menu["name"], open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = _G.menu["config"], fileext = ".txt"}
+local library = {design = getgenv().design == "kali" and "kali" or "uwuware", tabs = {}, draggable = true, flags = {}, title = _G.menu.name, open = false, popup = nil, instances = {}, connections = {}, options = {}, notifications = {}, tabSize = 0, theme = {}, foldername = _G.menu.config, fileext = ".txt"}
 getgenv().library = library
 
 --Locals
