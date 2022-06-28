@@ -2708,4 +2708,5 @@ local function promptLib()
     end
 end 
 
+return library
 --LIBRARY END
