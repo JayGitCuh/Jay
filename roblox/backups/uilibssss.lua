@@ -3531,7 +3531,7 @@ function library:CreateWindow(name, size, hidebutton)
             local list = { }
             list.name = name or ""
 
-            list.Main = Instance.new("Frame", tab.TabPage) 
+            list.Main = Instance.new("Frame", window.Frame) 
             list.Main.Name = list.name:gsub(" ", "") .. "Sector"
             list.Main.BorderColor3 = window.theme.outlinecolor
             list.Main.ZIndex = 2
