@@ -3,7 +3,7 @@ getgenv().vozoidcustomdrawingpropertiesconnectionsudim2 = true
 
 local inputService = game:GetService("UserInputService")
 
-local Signal = loadstring(game:HttpGet("https://raw.githubusercontent.com/vozoid/signal-library/main/main.lua"))()
+local Signal = loadstring(game:HttpGet("https://raw.githubusercontent.com/JayGitCuh/Jay/main/roblox/backups/signals.lua"))()
 
 local customProperties = {}
 local customConnections = {}
