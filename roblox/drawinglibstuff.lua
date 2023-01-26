@@ -1,4 +1,4 @@
-local drawing = {} do
+local drawing = {}
     local services = setmetatable({}, {
         __index = function(self, key)
             if key == "InputService" then
