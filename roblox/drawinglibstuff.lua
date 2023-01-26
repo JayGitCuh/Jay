@@ -1,4 +1,5 @@
-local drawing = {} do
+local drawing = {}
+do
     local services = setmetatable({}, {
         __index = function(self, key)
             if key == "InputService" then
@@ -327,6 +328,7 @@ local drawing = {} do
         local signalnames = {}
 
         local listfunc
+        local listfuncX
         local scrollfunc
         local refreshscrolling
 
@@ -489,6 +491,29 @@ local drawing = {} do
                     listadds[self][object] = object.Size.Y + (#listchildren[self] == 1 and 0 or padding)
                     listcontents[self] = listcontents[self] + object.Size.Y + (#listchildren[self] == 1 and 0 or padding)
                 end
+                listfuncX = function(self, padding)
+                    objpaddings[self] = padding
+                    listcontents[self] = 0
+                    listchildren[self] = {}
+                    listindexes[self] = {}
+                    listadds[self] = {}
+    
+                    listobjs[self] = true
+    
+                    for i, object in next, objchildren[self] do
+                        table.insert(listchildren[self], object)
+                        table.insert(listindexes[self], listcontents[self] + (#listchildren[self] == 1 and 0 or padding))
+    
+                        local newpos = mtobjs[self].Position + Vector2.new(0, listcontents[self] + (#listchildren[self] == 1 and 0 or padding))
+                        object.Position = newpos
+                        
+                        childrenposupdates[object](objmts[object], newpos)
+    
+                        custompropertysets[object]("AbsolutePosition", newpos)
+                        
+                        listadds[self][object] = object.Size.X + (#listchildren[self] == 1 and 0 or padding)
+                        listcontents[self] = listcontents[self] + object.Size.X + (#listchildren[self] == 1 and 0 or padding)
+                    end
 
                 if attemptedscrollable then
                     scrollfunc(self)
@@ -531,6 +556,9 @@ local drawing = {} do
 
                 if k == "AddListLayout" and listfunc then
                     return listfunc
+                end
+                if k == "AddListLayoutX" and listfuncX then
+                    return listfuncX
                 end
 
                 if k == "MakeScrollable" and scrollfunc then
@@ -1150,4 +1178,5 @@ end
 function utility.hextorgb(hex)
     return Color3.fromRGB(tonumber("0x" .. hex:sub(1, 2)), tonumber("0x" .. hex:sub(3, 4)), tonumber("0x"..hex:sub(5, 6)))
 end
-return utility
+end
+return utility;
